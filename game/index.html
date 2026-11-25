@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hearth &amp; Skillet — Bistro Kitchen Game</title>
+  <link rel="icon" href="data:,">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      background: #1f140e;
+      color: #fdf6e9;
+      font-family: "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      user-select: none;
+    }
+    #stage-wrap {
+      position: relative;
+      width: min(100vw, calc(100vh * 16 / 9));
+      height: min(100vh, calc(100vw * 9 / 16));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 24px 64px rgba(0, 0, 0, 0.65);
+      border-radius: 10px;
+      overflow: hidden;
+      background: #2b1a12;
+    }
+    #game-canvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="stage-wrap">
+    <canvas id="game-canvas" width="1280" height="720"></canvas>
+  </div>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
